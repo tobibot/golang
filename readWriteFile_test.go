@@ -13,6 +13,10 @@ const (
 )
 
 func TestReadFromFile(t *testing.T) {
+	if _, err := os.Stat(fileName); os.IsNotExist(err) {
+		return
+	}
+
 	file, err := os.Open(fileName)
 	check(err)
 	defer file.Close()
@@ -26,7 +30,6 @@ func TestReadFromFile(t *testing.T) {
 	for _, line := range lines {
 		println(line)
 	}
-	
 
 }
 
