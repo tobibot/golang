@@ -1,4 +1,4 @@
-package cheatgoes
+package learninggo
 
 import "log"
 
