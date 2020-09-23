@@ -1,4 +1,4 @@
-# learningGo
+# learninggo
 
 ## This is...
 
