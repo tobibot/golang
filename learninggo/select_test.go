@@ -10,10 +10,10 @@ func Test_Select(t *testing.T) {
 	c1 := make(chan string)
 	c2 := make(chan string)
 
-	go func() {
-		time.Sleep(3 * time.Second)
+	go func(sleep int) {
+		time.Sleep(time.Duration(sleep) * time.Second)
 		c1 <- "one"
-	}()
+	}(3)
 	go func() {
 		time.Sleep(2 * time.Second)
 		c2 <- "two"
