@@ -30,5 +30,17 @@ func TestConversion(t *testing.T) {
 }
 
 func TestCasting(t *testing.T) {
+	var foo interface{} = "one more thing"
+	myFooStr := foo.(string)
+	println(myFooStr)
 
+	var bar interface{} = "dyfhdgh"
+	bar = nil
+	defer PrintConversionFailed(t)
+	_ = bar.(string)
+}
+
+func PrintConversionFailed(t *testing.T) {
+	println("ConversionFailed as expected")
+	t.Skip()
 }
