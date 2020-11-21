@@ -57,3 +57,8 @@ func TestJsonUnMarshal(t *testing.T) {
 	fmt.Println(product)
 	fmt.Printf("Product '%s' unmarshalled\n", product.ProductName)
 }
+
+func TestJsonEncode(t *testing.T) {
+	// ToDo
+
+}
