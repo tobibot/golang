@@ -19,10 +19,10 @@ type Subscriber struct {
 
 func TestTemplates(t *testing.T) {
 
-	templatesMoreCoplex()
+	templatesMoreComplex()
 }
 
-func templatesMoreCoplex() {
+func templatesMoreComplex() {
 	templateText := "Name: {{.Name}}\n {{if .Active}} Rate: {{.Rate}} {{end}}\n"
 	exectueTemplate(templateText, Subscriber{Name: "Homer Simpson", Active: false, Rate: 23.2})
 	exectueTemplate(templateText, Subscriber{Name: "Ned  Flanders", Active: true, Rate: 2.6})
