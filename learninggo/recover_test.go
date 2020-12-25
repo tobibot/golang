@@ -12,7 +12,7 @@ func TestRecover(t *testing.T) {
 	fmt.Println("doing something")
 	panic("ooops")
 
-	fmt.Println("Finisch")
+	fmt.Println("Finish")
 }
 
 func recoverFromPanic() {
